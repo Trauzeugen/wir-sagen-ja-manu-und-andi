@@ -72,11 +72,13 @@ body{
     	$('#magazine').css({
           width: breite_out + 'px',
           height: berechnete_hoehe + 'px'
+		  $('#calculated_height').text('Erste Schleife');	
    		 });
 		} else {
     	$('#magazine').css({
           width: hoehe_out * 0.72 + 'px',
           height: hoehe_out + 'px'
+		  $('#calculated_height').text('Zweite Schleife');
     	});
 		}
     });
@@ -139,6 +141,7 @@ body{
 </body>
 
 </html>	
+
 
 
 
