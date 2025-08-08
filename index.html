@@ -1,10 +1,60 @@
+<!-- Das ist ein vereinfachter Beispiel- Code -->
+
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
   <title>Mein Flipbook</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/turn.js@4/turn.min.js"></script>
+  <style>
+    body {
+      background: #f0f0f0;
+      font-family: sans-serif;
+    }
+    #flipbook {
+      width: 800px;
+      height: 500px;
+      margin: 50px auto;
+    }
+    #flipbook .page {
+      width: 400px;
+      height: 500px;
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="flipbook">
+    <div class="page" style="background-image: url('Bilder/seite_01.png');"></div>
+    <div class="page" style="background-image: url('Bilder/seite_02.png');"></div>
+    <div class="page" style="background-image: url('Bilder/seite_03.png');"></div>
+    <div class="page" style="background-image: url('Bilder/seite_04.png');"></div>
+  </div>
+
+  <script>
+    $(document).ready(function() {
+      $('#flipbook').turn({
+        width: 800,
+        height: 500,
+        autoCenter: true
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+<!-- Das ist mein Code -->
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Mein Flipbook</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/turn.js@4/turn.min.js"></script>
   <style>
     body {
       background: #f0f0f0;
@@ -92,6 +142,7 @@
 </script>
 </body>
 </html>
+-->
 
 
 
