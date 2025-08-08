@@ -32,6 +32,8 @@ body{
 <div id="bildschirmbreite_avl"></div>
 <div id="bildschirmhoehe_avl"></div>
 <div id="pixel_ratio"></div>
+<div id="calculated_width"></div>		
+<div id="calculated_height"></div>	
 
 <script>
     $(document).ready(function () {
@@ -41,22 +43,27 @@ body{
         $('#fensterhoehe_aussen').text('Fensterhöhe außen: ' + hoehe_out + ' Pixel');
 
         const breite_in = window.innerWidth;
-        $('#fensterbreite_innen').text('Fensterbreite innen: ' + breite_in + ' Pixel');
+        //$('#fensterbreite_innen').text('Fensterbreite innen: ' + breite_in + ' Pixel');
 		const hoehe_in = window.innerHeight;
-        $('#fensterhoehe_innen').text('Fensterhöhe innen: ' + hoehe_in + ' Pixel');
+        //$('#fensterhoehe_innen').text('Fensterhöhe innen: ' + hoehe_in + ' Pixel');
 
         const breite_display = screen.width;
-        $('#bildschirmbreite').text('Bildschirmbreite: ' + breite_display + ' Pixel');
+        //$('#bildschirmbreite').text('Bildschirmbreite: ' + breite_display + ' Pixel');
 		const hoehe_display = screen.height;
-        $('#bildschirmhoehe').text('Bildschirmhöhe: ' + hoehe_display + ' Pixel');
+        //$('#bildschirmhoehe').text('Bildschirmhöhe: ' + hoehe_display + ' Pixel');
 
         const breite_display_avl = screen.availWidth;
-        $('#bildschirmbreite_avl').text('Bildschirmbreite verfügbar: ' + breite_display_avl + ' Pixel');
+        //$('#bildschirmbreite_avl').text('Bildschirmbreite verfügbar: ' + breite_display_avl + ' Pixel');
 		const hoehe_display_avl = screen.availHeight;
-        $('#bildschirmhoehe_avl').text('Bildschirmbreite verfügbar: ' + hoehe_display_avl + ' Pixel');
+        //$('#bildschirmhoehe_avl').text('Bildschirmbreite verfügbar: ' + hoehe_display_avl + ' Pixel');
 
         const pixel_ratio = window.devicePixelRatio;
-         $('#pixel_ratio').text('Pixel Ratio: ' + pixel_ratio);
+        //$('#pixel_ratio').text('Pixel Ratio: ' + pixel_ratio);
+
+        calced_width = calc(hoehe_out / 1.38);
+		$('#calculated_width').text('Kalkulierte Breite: ' + calced_width + ' Pixel');
+		calced_height = calc(breite_out * 1.38);
+		$('#calculated_height').text('Kalkulierte Höhe: ' + calced_height + ' Pixel');
     });
 </script>
 
