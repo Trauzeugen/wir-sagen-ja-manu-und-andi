@@ -1,6 +1,8 @@
 <!doctype html>
 <html>
 <head>
+  <meta charset="UTF-8">
+  <title>Fensterbreiten anzeigen</title>
   <script src="jquery-3.7.1.min.js"></script>
   <script src="turn.min.js"></script>
 
@@ -43,18 +45,6 @@ body{
 						});
 	});
 
-	// Fensterbreite auslesen und anzeigen
-    const breite_out = window.outerWidth;
-    $('#fensterbreite aussen').text('Fensterbreite aussen: ' + breite_out + ' Pixel');
-	const breite_in = window.innerWidth;
-    $('#fensterbreite innen').text('Fensterbreite innen: ' + breite_int + ' Pixel');
-	const breite_display = screen.width
-    $('#bildschirmbreite').text('bildschirmbreite: ' + breite_display + ' Pixel');
-	const breite_display_avl = screen.availWidth
-     $('#bildschirmbreite_avl').text('bildschirmbreite avl: ' + breite_display_avl + ' Pixel');
-	const pixel_ratio = window.devicePixelRatio
-     $('#pixel_ratio').text('pixel ratio: ' + pixel_ratio + ' Pixel');
-
 	// Tastatursteuerung
   $(window).bind('keydown', function(e){
     if (e.keyCode==37)
@@ -85,9 +75,35 @@ body{
 
 </script>
 
+<div id="fensterbreite_aussen"></div>
+    <div id="fensterbreite_innen"></div>
+    <div id="bildschirmbreite"></div>
+    <div id="bildschirmbreite_avl"></div>
+    <div id="pixel_ratio"></div>
+
+    <script>
+        $(document).ready(function () {
+            const breite_out = window.outerWidth;
+            $('#fensterbreite_aussen').text('Fensterbreite außen: ' + breite_out + ' Pixel');
+
+            const breite_in = window.innerWidth;
+            $('#fensterbreite_innen').text('Fensterbreite innen: ' + breite_in + ' Pixel');
+
+            const breite_display = screen.width;
+            $('#bildschirmbreite').text('Bildschirmbreite: ' + breite_display + ' Pixel');
+
+            const breite_display_avl = screen.availWidth;
+            $('#bildschirmbreite_avl').text('Bildschirmbreite verfügbar: ' + breite_display_avl + ' Pixel');
+
+            const pixel_ratio = window.devicePixelRatio;
+            $('#pixel_ratio').text('Pixel Ratio: ' + pixel_ratio);
+        });
+    </script>
+
 </body>
 
 </html>	
+
 
 
 
