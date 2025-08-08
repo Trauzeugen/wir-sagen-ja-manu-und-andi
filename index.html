@@ -23,73 +23,66 @@
 
 
 <!-- Das ist ein vereinfachter Beispiel- Code -->
-
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>Flipbook</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <!-- <script src="https://www.turnjs.com/lib/turn.min.js"></script> -->
-  <script src="https://cdn.jsdelivr.net/npm/turn.js@4/turn.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>  -->
+<script type="text/javascript" src="../../turn.min.js"></script>
 
-<style>
-    body {
-      background: #f0f0f0;
-      font-family: sans-serif;
-    }
-    #flipbook {
-      width: 800px;
-      height: 500px;
-      margin: 50px auto;
-    }
-    .page {
-      width: 400px;
-      height: 500px;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-  </style>
+<style type="text/css">
+body{
+	background:#ccc;
+}
+#magazine{
+	width:1152px;
+	height:752px;
+}
+#magazine .turn-page{
+	background-color:#ccc;
+	background-size:100% 100%;
+}
+</style>
 </head>
 <body>
 
-	<!--
-  <div id="flipbook">
-    <div class="page" style="background-image: url('Bilder_compressed/seite_01_2.png');"></div>
-    <div class="page" style="background-image: url('Bilder_compressed/seite_02_2.png');"></div>
-    <div class="page" style="background-image: url('Bilder_compressed/seite_03_2.png');"></div>
-    <div class="page" style="background-image: url('Bilder_compressed/seite_04_2.png');"></div>
-  </div>
-	-->
+<div id="magazine">
+	<div style="background-image:url(Bilder_compressed/seite_01_2.png);"></div>
+	<div style="background-image:url(Bilder_compressed/seite_02_2.png);"></div>
+	<div style="background-image:url(Bilder_compressed/seite_03_2.png);"></div>
+	<div style="background-image:url(Bilder_compressed/seite_04_2.png);"></div>
+</div>
 
-	<div id="flipbook">
-     <div><img src="Bilder_compressed/seite_01_2.png" style="width:100%; height:100%;"></div>
-     <div><img src="Bilder_compressed/seite_02_2.png" style="width:100%; height:100%;"></div>
-     <div><img src="Bilder_compressed/seite_03_2.png" style="width:100%; height:100%;"></div>
-	 <div><img src="Bilder_compressed/seite_04_2.png" style="width:100%; height:100%;"></div>	
-   </div>
+<script type="text/javascript">
 
+	$(window).ready(function() {
+		$('#magazine').turn({
+							display: 'double',
+							acceleration: true,
+							gradients: !$.isTouch,
+							elevation:50,
+							when: {
+								turned: function(e, page) {
+									/*console.log('Current view: ', $(this).turn('view'));*/
+								}
+							}
+						});
+	});
 	
-  <div id="flipbook">
-    <div>Seite 1</div>
-    <div>Seite 2</div>
-  </div>
 	
+	$(window).bind('keydown', function(e){
+		
+		if (e.keyCode==37)
+			$('#magazine').turn('previous');
+		else if (e.keyCode==39)
+			$('#magazine').turn('next');
+			
+	});
 
-  <script>
-    $(document).ready(function() {
-      console.log("Turn.js wird initialisiert...");
-      $('#flipbook').turn({
-        width: 800,
-        height: 500,
-        autoCenter: true
-      });
-    });
-  </script>
+</script>
 
 </body>
-</html>
+</html>	
 
 
 
@@ -191,6 +184,7 @@
 </body>
 </html>
 -->
+
 
 
 
