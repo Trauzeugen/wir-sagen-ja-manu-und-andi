@@ -42,8 +42,19 @@ body{
 							}
 						});
 	});
-	
-	
+
+	// Fensterbreite auslesen und anzeigen
+    const breite_out = window.outerWidth;
+    $('#fensterbreite aussen').text('Fensterbreite aussen: ' + breite_out + ' Pixel');
+	const breite_in = window.innerWidth;
+    $('#fensterbreite innen').text('Fensterbreite innen: ' + breite_int + ' Pixel');
+	const breite_display = screen.width
+    $('#bildschirmbreite').text('bildschirmbreite: ' + breite_display + ' Pixel');
+	const breite_display_avl = screen.availWidth
+     $('#bildschirmbreite_avl').text('bildschirmbreite avl: ' + breite_display_avl + ' Pixel');
+	const pixel_ratio = window.devicePixelRatio
+     $('#pixel_ratio').text('pixel ratio: ' + pixel_ratio + ' Pixel');
+
 	// Tastatursteuerung
   $(window).bind('keydown', function(e){
     if (e.keyCode==37)
@@ -77,6 +88,7 @@ body{
 </body>
 
 </html>	
+
 
 
 
