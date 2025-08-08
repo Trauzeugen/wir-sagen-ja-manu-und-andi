@@ -38,9 +38,9 @@ body{
 <script>
     $(document).ready(function () {
         const breite_out = window.outerWidth;
-        $('#fensterbreite_aussen').text('Fensterbreite außen: ' + breite_out + ' Pixel');
+        //$('#fensterbreite_aussen').text('Fensterbreite außen: ' + breite_out + ' Pixel');
 		const hoehe_out = window.outerHeight;
-        $('#fensterhoehe_aussen').text('Fensterhöhe außen: ' + hoehe_out + ' Pixel');
+        //$('#fensterhoehe_aussen').text('Fensterhöhe außen: ' + hoehe_out + ' Pixel');
 
         const breite_in = window.innerWidth;
         //$('#fensterbreite_innen').text('Fensterbreite innen: ' + breite_in + ' Pixel');
@@ -61,9 +61,9 @@ body{
         //$('#pixel_ratio').text('Pixel Ratio: ' + pixel_ratio);
 
         const calced_width = hoehe_out * 0.73;
-		$('#calculated_width').text('Kalkulierte Breite: ' + calced_width + ' Pixel');
+		//$('#calculated_width').text('Kalkulierte Breite: ' + calced_width + ' Pixel');
 		const calced_height = breite_out * 1.38;
-		$('#calculated_height').text('Kalkulierte Höhe: ' + calced_height + ' Pixel');
+		//$('#calculated_height').text('Kalkulierte Höhe: ' + calced_height + ' Pixel');
 
 		// Dynamische Größe für #magazine setzen
 		let berechnete_hoehe = breite_out * 1.38;
@@ -84,10 +84,60 @@ body{
 
 	
 <div id="magazine">
-	<div style="background-image:url(Bilder_compressed/seite_01_2.png);"></div>
-	<div style="background-image:url(Bilder_compressed/seite_02_2.png);"></div>
-	<div style="background-image:url(Bilder_compressed/seite_03_2.png);"></div>
-	<div style="background-image:url(Bilder_compressed/seite_04_2.png);"></div>
+	<div class="page" style="background-image: url('Bilder/seite_01.png');"></div>
+    <div class="page" style="background-image: url('Bilder/seite_02.png');"></div>
+    <div class="page" style="background-image: url('Bilder/seite_03.png');"></div>
+    <div class="page" style="background-image: url('Bilder/seite_04.png');"></div>
+    <div class="page" style="background-image: url('Bilder/seite_05.png');"></div>
+	<div class="page" style="background-image: url('Bilder/seite_06.png');"></div>
+    <div class="page" style="background-image: url('Bilder/seite_07.png');"></div>
+    <div class="page" style="background-image: url('Bilder/seite_08.png');"></div>
+    <div class="page" style="background-image: url('Bilder/seite_09.png');"></div>
+    <div class="page" style="background-image: url('Bilder/seite_10.png');"></div>
+	<div class="page" style="background-image: url('Bilder/seite_11.png');"></div>
+    <div class="page" style="background-image: url('Bilder/seite_12.png');"></div>
+    <div class="page" style="background-image: url('Bilder/seite_13.png');"></div>
+    <div class="page" style="background-image: url('Bilder/seite_14.png');"></div>
+    <div class="page" style="background-image: url('Bilder/seite_15.png');"></div>
+	<div class="page" style="background-image: url('Bilder/seite_16.png');"></div>
+    <div class="page" style="background-image: url('Bilder/seite_17.png');"></div>
+    <div class="page" style="background-image: url('Bilder/seite_18.png');"></div>
+    <div class="page" style="background-image: url('Bilder/seite_19.png');"></div>
+    <div class="page" style="background-image: url('Bilder/seite_20.png');"></div>
+	<div class="page" style="background-image: url('Bilder/seite_21.png');"></div>
+    <div class="page" style="background-image: url('Bilder/seite_22.png');"></div>
+    <div class="page" style="background-image: url('Bilder/seite_23.png');"></div>
+    <div class="page" style="background-image: url('Bilder/seite_24.png');"></div>
+    <div class="page" style="background-image: url('Bilder/seite_25.png');"></div>
+	<div class="page" style="background-image: url('Bilder/seite_26.png');"></div>
+    <div class="page" style="background-image: url('Bilder/seite_27.png');"></div>
+    <div class="page" style="background-image: url('Bilder/seite_28.png');"></div>
+    <div class="page" style="background-image: url('Bilder/seite_29.png');"></div>
+    <div class="page" style="background-image: url('Bilder/seite_30.png');"></div>
+	<div class="page" style="background-image: url('Bilder/seite_31.png');"></div>
+    <div class="page" style="background-image: url('Bilder/seite_32.png');"></div>
+    <div class="page" style="background-image: url('Bilder/seite_33.png');"></div>
+    <div class="page" style="background-image: url('Bilder/seite_34.png');"></div>
+    <div class="page" style="background-image: url('Bilder/seite_35.png');"></div>
+	<div class="page" style="background-image: url('Bilder/seite_36.png');"></div>
+    <div class="page" style="background-image: url('Bilder/seite_37.png');"></div>
+    <div class="page" style="background-image: url('Bilder/seite_38.png');"></div>
+    <div class="page" style="background-image: url('Bilder/seite_39.png');"></div>
+    <div class="page" style="background-image: url('Bilder/seite_40.png');"></div>
+	<div class="page" style="background-image: url('Bilder/seite_41.png');"></div>
+    <div class="page" style="background-image: url('Bilder/seite_42.png');"></div>
+    <div class="page" style="background-image: url('Bilder/seite_43.png');"></div>
+    <div class="page" style="background-image: url('Bilder/seite_44.png');"></div>
+    <div class="page" style="background-image: url('Bilder/seite_45.png');"></div>
+	<div class="page" style="background-image: url('Bilder/seite_46.png');"></div>
+    <div class="page" style="background-image: url('Bilder/seite_47.png');"></div>
+    <div class="page" style="background-image: url('Bilder/seite_48.png');"></div>
+    <div class="page" style="background-image: url('Bilder/seite_49.png');"></div>
+    <div class="page" style="background-image: url('Bilder/seite_50.png');"></div>
+	<div class="page" style="background-image: url('Bilder/seite_51.png');"></div>
+    <div class="page" style="background-image: url('Bilder/seite_52.png');"></div>
+    <div class="page" style="background-image: url('Bilder/seite_53.png');"></div>
+    <div class="page" style="background-image: url('Bilder/seite_54.png');"></div>
 </div>
 
 <script type="text/javascript">
@@ -139,6 +189,7 @@ body{
 </body>
 
 </html>	
+
 
 
 
