@@ -93,17 +93,21 @@ body{
 <script type="text/javascript">
 
 	$(window).ready(function() {
-		$('#magazine').turn({
-							display: 'single',
-							acceleration: true,
-							gradients: !$.isTouch,
-							elevation:50,
-							when: {
-								turned: function(e, page) {
-									/*console.log('Current view: ', $(this).turn('view'));*/
-								}
-							}
-						});
+	const breite_out = window.outerWidth;
+    const display_mode = breite_out >= 1600 ? 'double' : 'single';
+
+    $('#magazine').turn({
+    display: display_mode,
+    acceleration: true,
+    gradients: !$.isTouch,
+    elevation: 50,
+    when: {
+      turned: function(e, page) {
+        //console.log('Current view: ', $(this).turn('view'));
+      }
+    }
+  });
+});
 	});
 
 	// Tastatursteuerung
@@ -139,6 +143,7 @@ body{
 </body>
 
 </html>	
+
 
 
 
