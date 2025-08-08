@@ -33,8 +33,7 @@ body{
 <div id="bildschirmhoehe_avl"></div>
 <div id="pixel_ratio"></div>
 <div id="calculated_width"></div>		
-<div id="calculated_height"></div>	
-<div id="ausgabe"></div>		
+<div id="calculated_height"></div>			
 
 <script>
     $(document).ready(function () {
@@ -73,13 +72,11 @@ body{
     	$('#magazine').css({
           width: breite_out + 'px',
           height: berechnete_hoehe + 'px'
-		  $('#ausgabe').text('Erste Schleife');
    		 });
 		} else {
     	$('#magazine').css({
           width: hoehe_out * 0.72 + 'px',
           height: hoehe_out + 'px'
-		 $('#ausgabe').text('Zweite Schleife');
     	});
 		}
     });
@@ -142,6 +139,7 @@ body{
 </body>
 
 </html>	
+
 
 
 
