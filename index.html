@@ -44,20 +44,40 @@ body{
 	});
 	
 	
-	$(window).bind('keydown', function(e){
-		
-		if (e.keyCode==37)
-			$('#magazine').turn('previous');
-		else if (e.keyCode==39)
-			$('#magazine').turn('next');
-			
-	});
+	// Tastatursteuerung
+  $(window).bind('keydown', function(e){
+    if (e.keyCode==37)
+      $('#magazine').turn('previous');
+    else if (e.keyCode==39)
+      $('#magazine').turn('next');
+  });
+
+  // Touchsteuerung
+  let startX;
+
+  $('#magazine').on('touchstart', function(e) {
+    startX = e.originalEvent.touches[0].clientX;
+  });
+
+  $('#magazine').on('touchend', function(e) {
+    let endX = e.originalEvent.changedTouches[0].clientX;
+    let diffX = startX - endX;
+
+    if (Math.abs(diffX) > 50) {
+      if (diffX > 0) {
+        $('#magazine').turn('next');
+      } else {
+        $('#magazine').turn('previous');
+      }
+    }
+  });
 
 </script>
 
 </body>
 
 </html>	
+
 
 
 
