@@ -1,0 +1,39 @@
+/* Standard: mobile-friendly */
+#magazine {
+  width: 90vw;
+  height: calc(90vw * 0.65);
+  margin: auto;
+}
+
+#magazine > div {
+  width: 45vw;
+  height: calc(90vw * 0.65);
+  background-size: cover;
+  background-position: center;
+}
+
+/* Für Tablets */
+@media (min-width: 481px) and (max-width: 1024px) {
+  #magazine {
+    width: 800px;
+    height: 520px;
+  }
+
+  #magazine > div {
+    width: 400px;
+    height: 520px;
+  }
+}
+
+/* Für Desktops */
+@media (min-width: 1025px) {
+  #magazine {
+    width: 1152px;
+    height: 748px;
+  }
+
+  #magazine > div {
+    width: 576px;
+    height: 748px;
+  }
+}
