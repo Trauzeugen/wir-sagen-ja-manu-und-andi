@@ -2,10 +2,45 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Timos Zeitung</title>
+  <title>Mein Flipbook</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
+  <style>
+    body {
+      background: #f0f0f0;
+      font-family: sans-serif;
+    }
+    #flipbook {
+      width: 800px;
+      height: 500px;
+      margin: 50px auto;
+    }
+    #flipbook .page {
+      width: 400px;
+      height: 500px;
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
 </head>
 <body>
-  <h1>Willkommen zu Timos interaktiver Zeitung!</h1>
-  <p>Hier entsteht ein Flipbook mit Videos und Bildern.</p>
+  <div id="flipbook">
+    <div class="page" style="background-image: url('titelblatt.png');"></div>
+    <div class="page" style="background-image: url('seite1.png');"></div>
+    <div class="page" style="background-image: url('seite2.png');"></div>
+    <div class="page" style="background-image: url('seite3.png');"></div>
+    <div class="page" style="background-image: url('seite4.png');"></div>
+    <div class="page" style="background-image: url('rueckseite.png');"></div>
+  </div>
+
+  <script>
+    $("#flipbook").turn({
+      width: 800,
+      height: 500,
+      autoCenter: true
+    });
+  </script>
 </body>
 </html>
+
+
