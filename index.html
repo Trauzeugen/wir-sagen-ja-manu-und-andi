@@ -66,11 +66,19 @@ body{
 		$('#calculated_height').text('Kalkulierte Höhe: ' + calced_height + ' Pixel');
 
 		// Dynamische Größe für #magazine setzen
-	    $('#magazine').css({
-    	width: breite_out + 'px',
-    	height: breite_out * 1.38 + 'px'
-		});
+		let berechnete_hoehe = breite_out * 1.38;
 
+		if (berechnete_hoehe <= hoehe_out) {
+    	$('#magazine').css({
+          width: breite_out + 'px',
+          height: berechnete_hoehe + 'px'
+   		 });
+		} else {
+    	$('#magazine').css({
+          width: hoehe_out * 0.72 + 'px',
+          height: hoehe_out + 'px'
+    	});
+		}
     });
 </script>
 
@@ -131,6 +139,7 @@ body{
 </body>
 
 </html>	
+
 
 
 
