@@ -26,7 +26,6 @@
 <body>
   <div id="flipbook">
     <div class="page" style="background-image: url('Bilder/seite_01.png');"></div>
-    <div class="page" style="background-image: url('Bilder/seite_01.png');"></div>
     <div class="page" style="background-image: url('Bilder/seite_02.png');"></div>
     <div class="page" style="background-image: url('Bilder/seite_03.png');"></div>
     <div class="page" style="background-image: url('Bilder/seite_04.png');"></div>
@@ -83,14 +82,19 @@
   </div>
 
   <script>
+  $(document).ready(function() {
     $("#flipbook").turn({
       width: 800,
       height: 500,
       autoCenter: true
     });
-  </script>
+  });
+</script>
 </body>
 </html>
+
+
+
 
 
 
