@@ -17,11 +17,12 @@
       height: 500px;
       margin: 50px auto;
     }
-    #flipbook .page {
+    .page {
       width: 400px;
       height: 500px;
       background-size: cover;
       background-position: center;
+      background-repeat: no-repeat;
     }
   </style>
 </head>
@@ -36,19 +37,18 @@
 
   <script>
     $(document).ready(function() {
+      console.log("Turn.js wird initialisiert...");
       $('#flipbook').turn({
         width: 800,
         height: 500,
-        autoCenter: true,
-        elevation: 50,
-        gradients: true,
-        duration: 1000
+        autoCenter: true
       });
     });
   </script>
 
 </body>
 </html>
+
 
 
 
@@ -151,6 +151,7 @@
 </body>
 </html>
 -->
+
 
 
 
