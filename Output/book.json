@@ -1,8 +1,8 @@
 {
   "pages": [
-    "Output/seite_01.jpg",
-    "Output/seite_02.jpg",
-    "Output/seite_03.jpg"
+    "seite_01.jpg",
+    "seite_02.jpg",
+    "seite_03.jpg"
   ],
   "properties": {
     "cover": true,
