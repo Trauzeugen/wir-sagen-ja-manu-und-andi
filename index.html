@@ -60,9 +60,9 @@ body{
         const pixel_ratio = window.devicePixelRatio;
         //$('#pixel_ratio').text('Pixel Ratio: ' + pixel_ratio);
 
-        calced_width = calc(hoehe_out / 1.38);
+        const calced_width = hoehe_out / 1.38;
 		$('#calculated_width').text('Kalkulierte Breite: ' + calced_width + ' Pixel');
-		calced_height = calc(breite_out * 1.38);
+		const calced_height = breite_out * 1.38;
 		$('#calculated_height').text('Kalkulierte Höhe: ' + calced_height + ' Pixel');
     });
 </script>
@@ -124,6 +124,7 @@ body{
 </body>
 
 </html>	
+
 
 
 
