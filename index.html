@@ -10,10 +10,9 @@
 body{
 	background:#ccc;
 }
-#magazine{
-  width: 1380px;
-  height: 1000px;
-}
+
+
+
 #magazine .turn-page{
 	background-color:#ccc;
 	background-size:100% 100%;
@@ -21,6 +20,7 @@ body{
 </style>
 </head>
 <body>
+
 
 	
 <div id="fensterbreite_aussen"></div>
@@ -64,6 +64,13 @@ body{
 		$('#calculated_width').text('Kalkulierte Breite: ' + calced_width + ' Pixel');
 		const calced_height = breite_out * 1.38;
 		$('#calculated_height').text('Kalkulierte Höhe: ' + calced_height + ' Pixel');
+
+		// Dynamische Größe für #magazine setzen
+	    $('#magazine').css({
+    	width: breite_out + 'px',
+    	height: breite_out * 1.38 + 'px'
+		});
+
     });
 </script>
 
@@ -124,6 +131,7 @@ body{
 </body>
 
 </html>	
+
 
 
 
