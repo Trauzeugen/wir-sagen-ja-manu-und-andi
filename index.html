@@ -1,22 +1,37 @@
 <!-- Alternative zu turn -->
 <!-- DearFlip CSS & JS -->
+<!--
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dearflip@2.1.0/css/dflip.min.css">
 <script src="https://cdn.jsdelivr.net/npm/dearflip@2.1.0/js/dflip.min.js"></script>
 
 <!-- Flipbook Container -->
+<!--
 <div class="df-flipbook" source="book.json" id="myFlipbook"></div>
 
+{
+  "pages": [
+    "seite_01.jpg",
+    "seite_02.jpg",
+    "seite_03.jpg"
+  ],
+  "properties": {
+    "cover": true,
+    "webgl": true
+  }
+}
+-->
 
 
 <!-- Das ist ein vereinfachter Beispiel- Code -->
-<!--
+
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Flipbook Test</title>
+  <title>Flipbook</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://www.turnjs.com/lib/turn.min.js"></script>
+  <!-- <script src="https://www.turnjs.com/lib/turn.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/turn.js@4/turn.min.js"></script>
 
 <style>
     body {
@@ -39,12 +54,28 @@
 </head>
 <body>
 
+	<!--
   <div id="flipbook">
     <div class="page" style="background-image: url('Bilder_compressed/seite_01_2.png');"></div>
     <div class="page" style="background-image: url('Bilder_compressed/seite_02_2.png');"></div>
     <div class="page" style="background-image: url('Bilder_compressed/seite_03_2.png');"></div>
     <div class="page" style="background-image: url('Bilder_compressed/seite_04_2.png');"></div>
   </div>
+	-->
+
+	<div id="flipbook">
+     <div><img src="Bilder_compressed/seite_01_2.png" style="width:100%; height:100%;"></div>
+     <div><img src="Bilder_compressed/seite_02_2.png" style="width:100%; height:100%;"></div>
+     <div><img src="Bilder_compressed/seite_03_2.png" style="width:100%; height:100%;"></div>
+	 <div><img src="Bilder_compressed/seite_04_2.png" style="width:100%; height:100%;"></div>	
+   </div>
+
+	
+  <div id="flipbook">
+    <div>Seite 1</div>
+    <div>Seite 2</div>
+  </div>
+	
 
   <script>
     $(document).ready(function() {
@@ -59,8 +90,6 @@
 
 </body>
 </html>
--->
-
 
 
 
@@ -162,6 +191,7 @@
 </body>
 </html>
 -->
+
 
 
 
