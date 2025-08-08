@@ -34,7 +34,6 @@ body{
 <div id="pixel_ratio"></div>
 <div id="calculated_width"></div>		
 <div id="calculated_height"></div>
-<div id="schleife"></div>
 
 <script>
     $(document).ready(function () {
@@ -73,15 +72,12 @@ body{
     	$('#magazine').css({
           width: breite_out + 'px',
           height: berechnete_hoehe + 'px'
-		  const loop = 1;
    		 });
 		} else {
     	$('#magazine').css({
           width: hoehe_out * 0.72 + 'px',
           height: hoehe_out + 'px'
-		  const loop = 2;
     	});
-	    $('#schleife').text('Schleifennummer: ' + loop);
 		}
     });
 </script>
@@ -143,6 +139,7 @@ body{
 </body>
 
 </html>	
+
 
 
 
