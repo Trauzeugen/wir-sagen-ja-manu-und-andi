@@ -11,7 +11,7 @@ body{
 	background:#ccc;
 }
 #magazine{
-  width: 1534px;
+  width: 1380px;
   height: 1000px;
 }
 #magazine .turn-page{
@@ -22,6 +22,45 @@ body{
 </head>
 <body>
 
+	
+<div id="fensterbreite_aussen"></div>
+<div id="fensterhoehe_aussen"></div>
+<div id="fensterbreite_innen"></div>
+<div id="fensterhoehe_innen"></div>
+<div id="bildschirmbreite"></div>
+<div id="bildschirmhoehe"></div>
+<div id="bildschirmbreite_avl"></div>
+<div id="bildschirmhoehe_avl"></div>
+<div id="pixel_ratio"></div>
+
+<script>
+    $(document).ready(function () {
+        const breite_out = window.outerWidth;
+        $('#fensterbreite_aussen').text('Fensterbreite außen: ' + breite_out + ' Pixel');
+		const hoehe_out = window.outerHeight;
+        $('#fensterhoehe_aussen').text('Fensterhöhe außen: ' + hoehe_out + ' Pixel');
+
+        const breite_in = window.innerWidth;
+        $('#fensterbreite_innen').text('Fensterbreite innen: ' + breite_in + ' Pixel');
+		const hoehe_in = window.innerHeight;
+        $('#fensterhoehe_innen').text('Fensterhöhe innen: ' + hoehe_in + ' Pixel');
+
+        const breite_display = screen.width;
+        $('#bildschirmbreite').text('Bildschirmbreite: ' + breite_display + ' Pixel');
+		const hoehe_display = screen.height;
+        $('#bildschirmhoehe').text('Bildschirmhöhe: ' + hoehe_display + ' Pixel');
+
+        const breite_display_avl = screen.availWidth;
+        $('#bildschirmbreite_avl').text('Bildschirmbreite verfügbar: ' + breite_display_avl + ' Pixel');
+		const hoehe_display_avl = screen.availHeight;
+        $('#bildschirmhoehe_avl').text('Bildschirmbreite verfügbar: ' + hoehe_display_avl + ' Pixel');
+
+        const pixel_ratio = window.devicePixelRatio;
+         $('#pixel_ratio').text('Pixel Ratio: ' + pixel_ratio);
+    });
+</script>
+
+	
 <div id="magazine">
 	<div style="background-image:url(Bilder_compressed/seite_01_2.png);"></div>
 	<div style="background-image:url(Bilder_compressed/seite_02_2.png);"></div>
@@ -75,34 +114,10 @@ body{
 
 </script>
 
-<div id="fensterbreite_aussen"></div>
-    <div id="fensterbreite_innen"></div>
-    <div id="bildschirmbreite"></div>
-    <div id="bildschirmbreite_avl"></div>
-    <div id="pixel_ratio"></div>
-
-    <script>
-        $(document).ready(function () {
-            const breite_out = window.outerWidth;
-            $('#fensterbreite_aussen').text('Fensterbreite außen: ' + breite_out + ' Pixel');
-
-            const breite_in = window.innerWidth;
-            $('#fensterbreite_innen').text('Fensterbreite innen: ' + breite_in + ' Pixel');
-
-            const breite_display = screen.width;
-            $('#bildschirmbreite').text('Bildschirmbreite: ' + breite_display + ' Pixel');
-
-            const breite_display_avl = screen.availWidth;
-            $('#bildschirmbreite_avl').text('Bildschirmbreite verfügbar: ' + breite_display_avl + ' Pixel');
-
-            const pixel_ratio = window.devicePixelRatio;
-            $('#pixel_ratio').text('Pixel Ratio: ' + pixel_ratio);
-        });
-    </script>
-
 </body>
 
 </html>	
+
 
 
 
