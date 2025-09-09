@@ -107,7 +107,23 @@ body{
 	<div class="page" style="background-image: url('Output/seite_21.jpg');"></div>
     <div class="page" style="background-image: url('Output/seite_22.jpg');"></div>
     <div class="page" style="background-image: url('Output/seite_23.jpg');"></div>
-    <div class="page" style="background-image: url('Output/seite_24.jpg');"></div>
+
+	<div class="page" style="background-image: url('Output/seite_24.jpg'); position: relative;">
+  	<!-- Play-Buttons -->
+  	<button class="playBtn" data-video="https://youtu.be/wvaJscsMHOw"
+          style="position: absolute; top: 20px; left: 50px; z-index: 10;">▶ Video 1</button>
+
+  	<!-- YouTube-Player (versteckt) -->
+  	<iframe id="ytPlayer" width="560" height="315"
+          src=""
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          style="position: absolute; top: 80px; left: 50px; display: none; z-index: 5;">
+  	</iframe>
+	</div>
+
+	
     <div class="page" style="background-image: url('Output/seite_25.jpg');"></div>
 	<div class="page" style="background-image: url('Output/seite_26.jpg');"></div>
     <div class="page" style="background-image: url('Output/seite_27.jpg');"></div>
@@ -189,6 +205,7 @@ body{
 </body>
 
 </html>	
+
 
 
 
