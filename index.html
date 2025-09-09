@@ -11,6 +11,25 @@ body{
 	background:#ccc;
 }
 
+.playBtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background: url('Output/play_icon.png') no-repeat center center;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.playBtn:hover {
+  transform: translate(-50%, -50%) scale(1.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
 
 
 #magazine .turn-page{
@@ -211,6 +230,7 @@ body{
 </body>
 
 </html>	
+
 
 
 
