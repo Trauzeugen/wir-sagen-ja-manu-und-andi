@@ -78,15 +78,13 @@ body{
           width: hoehe_out * 0.72 + 'px',
           height: hoehe_out + 'px'
     	});
-
+		}
 		// Abspielen von Videos	
 		$('.playBtn').on('click', function () {
   		const videoId = $(this).data('video');
   		const embedUrl = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1';
   		$('#ytPlayer').attr('src', embedUrl).css('display', 'block');
 		});
-
-		}
     });
 </script>
 
@@ -213,6 +211,7 @@ body{
 </body>
 
 </html>	
+
 
 
 
